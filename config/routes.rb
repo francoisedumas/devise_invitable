@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
       namespace :admin do
         resources :users
+        resource :invitee, only: [:new, :create]
       end
       root to: "admin/users#index", as: "admin_authenticated_root"
     end
