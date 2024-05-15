@@ -2,7 +2,7 @@
 
 <% content_for :actions do %>
   <div class="mt-4 flex-shrink-0 flex md:mt-0 md:ml-4">
-    <%= link_to t(".new"), "#", class: "btn btn-primary" %>
+    <%= link_to t(".new"), new_admin_invitee_path, class: "btn btn-primary" %>
   </div>
 <% end %>
 
@@ -17,6 +17,9 @@
                 <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6"><%= User.human_attribute_name(:full_name)%></th>
                 <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"><%= User.human_attribute_name(:email)%></th>
                 <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"><%= User.human_attribute_name(:role)%></th>
+                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Invité?</th>
+                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Accepté?</th>
+                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Invité par?</th>
                 <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
                   <span class="sr-only">Edit</span>
                 </th>

@@ -57,4 +57,5 @@ gem "sidekiq"
 gem "sidekiq-failures", "~> 1.0"
 gem "devise"
 gem "devise-i18n"
+gem 'devise_invitable', '~> 2.0.0'
 gem "view_component"

@@ -6,6 +6,8 @@ module Admin
     end
 
     def create
+      User.invite!(email_params, current_user)
+      redirect_to admin_users_path
     end
 
     private
