@@ -46,7 +46,15 @@ Rails.application.configure do
   # Config for mailcatcher
   config.action_mailer.default_url_options = { host: "localhost", port: 3000 }
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = { address: "127.0.0.1", port: 1025 }
+  config.action_mailer.smtp_settings = {
+    user_name: Rails.application.credentials.brevo_smtp_user_name,
+    password: Rails.application.credentials.brevo_smtp_password,
+    domain: 'localhost:3000',
+    address: 'smtp-relay.brevo.com',
+    port: 587,
+    authentication: :plain,
+    enable_starttls_auto: true
+  }
   config.action_mailer.raise_delivery_errors = false
 
   # Print deprecation notices to the Rails logger.
