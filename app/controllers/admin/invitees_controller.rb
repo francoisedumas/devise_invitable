@@ -13,7 +13,7 @@ module Admin
     private
 
     def email_params
-      params.permit(:email)
+      params.require(:user).permit(:email)
     end
   end
 end
