@@ -34,6 +34,7 @@ gem "redis", "~> 4.0"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
+gem 'name_of_person'
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
@@ -46,9 +47,6 @@ gem "enumerize"
 group :development, :test do
   gem "pry-byebug"
   gem "pry-rails"
-end
-
-group :development, :test do
   gem "rubocop-rails", require: false
 end
 

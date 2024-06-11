@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
+  has_person_name
   extend Enumerize
 
   ROLES = %i[admin default].freeze
