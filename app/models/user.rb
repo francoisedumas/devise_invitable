@@ -13,6 +13,8 @@ class User < ApplicationRecord
   devise :invitable, :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  validates :phone, phone: { allow_blank: true, types: :mobile, countries: :fr }
+
   def full_name
     "#{first_name&.capitalize} #{last_name&.upcase}".strip.presence || email.match(/^[^@]+/).to_s.capitalize
   end
